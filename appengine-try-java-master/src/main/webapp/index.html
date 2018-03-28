@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>App Engine Demo</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="result">Loading...</div>
+	<div id="result1">Loading...</div>
+	<div id="result2">Loading...</div>
+
+    <script>
+$(document).ready(function() {
+  $.getJSON('/demo', function(data) {
+    $('#result').html("Tri " + data.name);
+	$('#result1').html("Minh " + data.name1);
+	$('#result2').html("Hai " + data.name2);
+  });
+});
+    </script>
+  </body>
+</html>
